@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>SHREYAS GN Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <!-- Move to up button -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!-- navgaition menu -->
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="#">Portfolio.</a></div>
+      <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+      </ul>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+<!-- Home Section Start -->
+<section class="home" id="home">
+  <div class="home-content">
+    <div class="text">
+      <div class="text-one">Hello,</div>
+      <div class="text-two">I'm SHREYAS GN </div>
+      <div class="text-three">MCA Graduate | Python & Java Enthusiast | Web Development | Eager to Contribute to Innovative IT Solutions.</div>
+    </div>
+    <div class="button">
+      <!-- Link to your LinkedIn profile -->
+      <button onclick="openLinkedInInNewTab()">Hire Me</button>
+    </div>
+  </div>
+  <script>
+    function openLinkedInInNewTab() {
+      window.open('https://www.linkedin.com/in/shreyas-gn', '_blank');
+    }
+  </script>
+</section>
+<!-- About Section Start -->
+<section class="about" id="about">
+  <div class="content">
+    <div class="title"><span>About Me</span></div>
+    <div class="about-details">
+      <div class="right">
+        <div class="topic">Technology Is My Passion</div>
+        <p style="text-align: center;">As a recent Master of Computer Applications (MCA) graduate with a primary focus on web development, alongside proficient skills in Python and Java programming, I am eager to launch my career in the technology industry. I am actively seeking opportunities to apply my web development expertise and programming skills to contribute meaningfully to innovative projects. I am enthusiastic about connecting with professionals and exploring potential collaborations that align with my career aspirations as I enter the professional landscape as a fresher.</p>
+        <div class="button">
+          <a href="https://drive.google.com/file/d/1jrdXxKBpoe2Dq2NMxRQiZCBq3gwiH_Yc/view?usp=drive_link" target="_blank"><button>Download CV</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- My Skill Section Start -->
+<section class="skills" id="skills">
+  <div class="content">
+    <div class="title"><span>My Skills</span></div>
+    <div class="skills-details">
+      <div class="text">
+        <div class="topic">Skills Reflects Our Knowledge</div>
+        <p>Throughout my MCA graduation, I undertook numerous projects spanning web development, Python programming, and CSS, acquiring valuable hands-on experience across diverse domains. Worked upon numerous projects throughout the years ranging from web development to machine learning. </p>
+      </div>
+      <div class="boxes">
+        <div class="box">
+          <div class="topic">Python</div>
+        </div>
+        <div class="box">
+          <div class="topic">Java</div>
+        </div>
+        <div class="box">
+          <div class="topic">HTML5</div>
+        </div>
+        <div class="box">
+          <div class="topic">CSS</div>
+        </div>
+        <div class="box">
+          <div class="topic">JavaScript</div>
+        </div>
+        <div class="box">
+          <div class="topic">Web Development</div>
+        </div>
+        <div class="box">
+          <div class="topic">Software Development</div>
+        </div>
+        <div class="box">
+          <div class="topic">Structured Query Language (SQL)</div>
+        </div>
+        <div class="box">
+          <div class="topic">Cloud Computing</div>
+        </div>
+        <div class="box">
+          <div class="topic">Project Management</div>
+        </div>
+        <div class="box">
+          <div class="topic">Problem-Solving</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact Me section Start -->
+<section class="contact" id="contact">
+  <div class="content">
+    <div class="title"><span>Contact Me</span></div>
+    <div class="text">
+      <div class="topic">Have Any Project?</div>
+      <p>I am available for any projects or work opportunities. You can reach me at <a href="mailto:www.shreyasgudde007@gmail.com">www.shreyasgudde007@gmail.com</a>. <br>
+        Connect with me on LinkedIn: <a href="https://www.linkedin.com/in/shreyas-gn" id="linkedin-link">www.linkedin.com/in/shreyas-gn</a></p>
+      <div class="button">
+        <button onclick="openLinkedInInNewTab()">Contact</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function openLinkedInInNewTab() {
+      window.open(document.getElementById('linkedin-link').href, '_blank');
+    }
+  </script>
+</section>
+
+<!-- Contact Me section End -->
+
+  <script src="script.js"></script>
+</body>
+</html>
