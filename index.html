@@ -1,162 +1,411 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en" class="scroll-smooth">
+<head>
     <meta charset="UTF-8">
-    <title>SHREYAS GN Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-<body>
-  <!-- Move to up button -->
-  <div class="scroll-button">
-    <a href="#home"><i class="fas fa-arrow-up"></i></a>
-  </div>
-  <!-- navgaition menu -->
-  <nav>
-    <div class="navbar">
-      <div class="logo"><a href="#">Shreyas GN Portfolio.</a></div>
-      <ul class="menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <div class="cancel-btn">
-            <i class="fas fa-times"></i>
-          </div>
-      </ul>
-      </div>
-    </div>
-    <div class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </div>
-  </nav>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyas GN | Software Engineer</title>
+    <meta name="description" content="Software Engineer skilled in full-stack development, backend systems, and scalable application design. Based in Bengaluru, India.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- Home Section Start -->
-<section class="home" id="home">
-  <div class="home-content">
-    <div class="text">
-      <div class="text-one">Hello,</div>
-      <div class="text-two">I'm SHREYAS GN </div>
-      <div class="text-three">MCA Graduate | Backend Developer | Ex Intern - CodersCave | Python Enthusiast | Eager to Contribute to Innovative IT Solutions.
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#151e2e',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        accent: '#38bdf8', // Sky 400
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
 
-</div>
-    </div>
-    <div class="button">
-      <!-- Link to your LinkedIn profile -->
-      <button onclick="openLinkedInInNewTab()">Hire Me</button>
-    </div>
-  </div>
-  <script>
-    function openLinkedInInNewTab() {
-      window.open('https://www.linkedin.com/in/shreyas-gn', '_blank');
-    }
-  </script>
-</section>
-<!-- About Section Start -->
-<section class="about" id="about">
-  <div class="content">
-    <div class="title"><span>About Me</span></div>
-    <div class="about-details">
-      <div class="right">
-        <div class="topic">Technology Is My Passion</div>
-        <p style="text-align: center;">I'm a software engineer with experience in Python, back-end development, and cloud technologies like AWS and Kubernetes. I specialize in building scalable applications, optimizing performance, and designing APIs. My skills include JavaScript, Django, Flask, REST API, and database management. I’m passionate about solving complex problems and continuously learning new technologies. Currently open to roles in Software Engineering, cloud computing, and back-end engineering.</p>
-        <div class="button">
-          <a href="https://drive.google.com/file/d/1kXM0Hyt3R3GPIZ10gA41aEBgkdeRl8MW/view?usp=drive_link" target="_blank"><button>Download My CV</button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        /* Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-<!-- My Skill Section Start -->
-<section class="skills" id="skills">
-  <div class="content">
-    <div class="title"><span>My Skills</span></div>
-    <div class="skills-details">
-      <div class="text">
-        <div class="topic">Skills Reflects Our Knowledge</div>
-        <p>Throughout my MCA graduation, I undertook numerous projects spanning software development and Python programming, acquiring valuable hands-on experience across diverse domains. I worked on various projects of software development, utilizing Django and Flask libraries for web applications, developing APIs, and managing databases. Additionally, I gained experience working within Linux environments, which further enhanced my technical skills and adaptability.</p>
-      </div>
-      <div class="boxes">
-        <div class="box">
-          <div class="topic">Software Development</div>
-        </div>
-        <div class="box">
-          <div class="topic">Python Programming Language</div>
-        </div>
-        <div class="box">
-          <div class="topic">Django</div>
-        </div>
-        <div class="box">
-          <div class="topic">Flask</div>
-        </div>
-        <div class="box">
-          <div class="topic">RESTful API</div>
-        </div>
-        <div class="box">
-          <div class="topic">React JS</div>
-        </div>
-        <div class="box">
-          <div class="topic">Amazon Web Services (AWS)</div>
-        </div>
-        <div class="box">
-          <div class="topic">MySQL</div>
-        </div>
-        <div class="box">
-          <div class="topic">PostgreSQL</div>
-        </div>
-        <div class="box">
-          <div class="topic">Database Management System</div>
-        </div>
-        <div class="box">
-          <div class="topic">Linux</div>
-        </div>
-        <div class="box">
-          <div class="topic">Computer Networks</div>
-        </div>
-        <div class="box">
-          <div class="topic">API Development</div>
-        </div>
-        <div class="box">
-          <div class="topic">Serverless Computing</div>
-        </div>
-        <div class="box">
-          <div class="topic">Micro Services</div>
-        </div>
-        <div class="box">
-          <div class="topic">Problem-Solving</div>
-        </div>
-        <div class="box">
-          <div class="topic">Agile Methodologies</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Contact Me section Start -->
-<section class="contact" id="contact">
-  <div class="content">
-    <div class="title"><span>Contact Me</span></div>
-    <div class="text">
-      <div class="topic">Have Any Project?</div>
-      <p>I am available for any projects or work opportunities. You can reach me at <a href="mailto:www.shreyasgudde007@gmail.com">www.shreyasgudde007@gmail.com</a>. <br>
-        Connect with me on LinkedIn: <a href="https://www.linkedin.com/in/shreyas-gn" id="linkedin-link">www.linkedin.com/in/shreyas-gn</a></p>
-      <div class="button">
-        <button onclick="openLinkedInInNewTab()">Contact</button>
-      </div>
-    </div>
-  </div>
-  <script>
-    function openLinkedInInNewTab() {
-      window.open(document.getElementById('linkedin-link').href, '_blank');
-    }
-  </script>
-</section>
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-300 antialiased selection:bg-accent selection:text-slate-900">
 
-<!-- Contact Me section End -->
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md border-b border-white/5 bg-slate-900/80" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            
+            <!-- Updated Logo Section -->
+            <a href="#" class="flex items-center gap-3 group">
+                <!-- Icon Mark -->
+                <div class="w-10 h-10 bg-gradient-to-br from-slate-800 to-slate-900 border border-accent/30 rounded-lg flex items-center justify-center shadow-lg group-hover:border-accent transition-colors">
+                    <span class="text-accent font-mono font-bold text-lg">S</span>
+                </div>
+                <!-- Text -->
+                <div class="flex flex-col justify-center">
+                    <span class="text-slate-100 font-bold tracking-tight leading-none text-lg">SHREYAS GN</span>
+                    <span class="text-[10px] font-mono uppercase tracking-[0.2em] text-accent leading-tight mt-1 group-hover:text-white transition-colors">Personal Portfolio</span>
+                </div>
+            </a>
 
-  <script src="script.js"></script>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-accent transition-colors">About</a>
+                <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
+                <a href="#education" class="hover:text-accent transition-colors">Education</a>
+                <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-2xl" id="menu-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-slate-850 border-b border-white/5 p-4 flex flex-col space-y-4 shadow-xl">
+            <a href="#about" class="block hover:text-accent">About</a>
+            <a href="#skills" class="block hover:text-accent">Skills</a>
+            <a href="#projects" class="block hover:text-accent">Projects</a>
+            <a href="#contact" class="block hover:text-accent">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-[100px] -z-10"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] -z-10"></div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-mono text-accent mb-4 reveal">Hi, my name is</p>
+            <h1 class="text-5xl md:text-7xl font-bold text-slate-100 mb-6 reveal delay-100">
+                Shreyas GN.
+            </h1>
+            <h2 class="text-3xl md:text-5xl font-bold text-slate-400 mb-8 reveal delay-200">
+                I build scalable backend systems.
+            </h2>
+            <p class="max-w-xl mx-auto text-slate-400 mb-10 text-lg reveal delay-300">
+                Software Engineer specializing in full-stack development, modern APIs, and distributed systems. 
+                Focused on performance, reliability, and user-centric engineering aligned with high industry standards.
+            </p>
+            <div class="flex justify-center gap-4 reveal delay-300">
+                <a href="#projects" class="px-6 py-3 border border-accent text-accent rounded hover:bg-accent/10 transition-colors font-mono">
+                    Check my work
+                </a>
+                <a href="#contact" class="px-6 py-3 bg-accent text-slate-900 rounded font-bold hover:bg-sky-400 transition-colors font-mono">
+                    Hire Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 max-w-4xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row gap-12 items-start reveal">
+            <div class="md:w-2/3">
+                <h2 class="flex items-center text-2xl font-bold text-slate-100 mb-8">
+                    <span class="text-accent font-mono mr-2">01.</span> About Me
+                    <span class="ml-4 h-px bg-slate-700 flex-grow max-w-xs"></span>
+                </h2>
+                <div class="text-slate-400 space-y-4 leading-relaxed">
+                    <p>
+                        Hello! I'm Shreyas, a Software Engineer based in <span class="text-accent">Bengaluru, India</span>. 
+                        I enjoy building things that live on the internet, whether that be websites, applications, or anything in between.
+                    </p>
+                    <p>
+                        I have strong foundations in algorithms, data structures, and distributed system behavior. 
+                        My focus these days is on building production-style systems using modern abstractions and clean API design.
+                    </p>
+                    <p>
+                        I hold a <span class="text-slate-200">Masters in Computer Applications</span> from Bangalore Institute Of Technology, 
+                        where I focused on software engineering fundamentals and system design.
+                    </p>
+                </div>
+            </div>
+            <div class="md:w-1/3 w-full">
+                <div class="bg-slate-850 p-6 rounded border border-slate-700 hover:border-accent transition-colors group relative">
+                    <div class="absolute -top-2 -right-2 w-full h-full border-2 border-accent rounded z-[-1] translate-x-2 translate-y-2 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform"></div>
+                    <div class="text-center">
+                        <i class="fa-solid fa-code text-4xl text-accent mb-4"></i>
+                        <h3 class="text-slate-100 font-bold mb-2">Engineering Focus</h3>
+                        <ul class="text-sm text-slate-400 font-mono space-y-2 text-left mt-4 pl-4 list-disc">
+                            <li>System Reliability</li>
+                            <li>API Design</li>
+                            <li>Concurrency</li>
+                            <li>Distributed Systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 max-w-5xl mx-auto px-6 bg-slate-850/50">
+        <h2 class="flex items-center text-2xl font-bold text-slate-100 mb-12 reveal">
+            <span class="text-accent font-mono mr-2">02.</span> Technical Arsenal
+            <span class="ml-4 h-px bg-slate-700 flex-grow max-w-xs"></span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+            <!-- Backend -->
+            <div class="bg-slate-900 p-6 rounded-lg border border-slate-800 hover:border-accent/50 transition-colors">
+                <div class="flex items-center mb-4 text-accent">
+                    <i class="fa-solid fa-server mr-3"></i>
+                    <h3 class="font-bold text-slate-100">Backend & Systems</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300">Python</span>
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300">FastAPI</span>
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300">REST APIs</span>
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300">WebSockets</span>
+                </div>
+            </div>
+            <!-- Frontend -->
+            <div class="bg-slate-900 p-6 rounded-lg border border-slate-800 hover:border-accent/50 transition-colors">
+                <div class="flex items-center mb-4 text-accent">
+                    <i class="fa-brands fa-react mr-3"></i>
+                    <h3 class="font-bold text-slate-100">Frontend</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300">JavaScript</span>
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300">React</span>
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300">Next.js</span>
+                </div>
+            </div>
+            <!-- Data -->
+            <div class="bg-slate-900 p-6 rounded-lg border border-slate-800 hover:border-accent/50 transition-colors">
+                <div class="flex items-center mb-4 text-accent">
+                    <i class="fa-solid fa-database mr-3"></i>
+                    <h3 class="font-bold text-slate-100">Databases</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300">PostgreSQL</span>
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300">MySQL</span>
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300">Redis</span>
+                </div>
+            </div>
+            <!-- Tools -->
+            <div class="bg-slate-900 p-6 rounded-lg border border-slate-800 hover:border-accent/50 transition-colors">
+                <div class="flex items-center mb-4 text-accent">
+                    <i class="fa-solid fa-screwdriver-wrench mr-3"></i>
+                    <h3 class="font-bold text-slate-100">DevOps & Tools</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300">Git/GitHub</span>
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300">Docker</span>
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300">Linux</span>
+                </div>
+            </div>
+            <!-- CS Fundamentals -->
+            <div class="bg-slate-900 p-6 rounded-lg border border-slate-800 hover:border-accent/50 transition-colors md:col-span-2 lg:col-span-2">
+                <div class="flex items-center mb-4 text-accent">
+                    <i class="fa-solid fa-brain mr-3"></i>
+                    <h3 class="font-bold text-slate-100">CS Fundamentals</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300 border border-slate-700">Data Structures</span>
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300 border border-slate-700">Algorithms</span>
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300 border border-slate-700">OS</span>
+                    <span class="px-3 py-1 bg-slate-800 text-xs font-mono rounded text-slate-300 border border-slate-700">Networking</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 max-w-5xl mx-auto px-6">
+        <h2 class="flex items-center text-2xl font-bold text-slate-100 mb-12 reveal">
+            <span class="text-accent font-mono mr-2">03.</span> Featured Projects
+            <span class="ml-4 h-px bg-slate-700 flex-grow max-w-xs"></span>
+        </h2>
+        <div class="space-y-16">
+            <!-- Project 1 -->
+            <div class="relative grid md:grid-cols-12 gap-4 items-center reveal">
+                <div class="md:col-span-7 md:col-start-1 md:row-start-1 z-10 md:pr-6">
+                    <p class="font-mono text-accent text-sm mb-1">Full-Stack Web Application</p>
+                    <h3 class="text-2xl font-bold text-slate-100 mb-4">Community Health Dashboard</h3>
+                    <div class="bg-slate-850 p-6 rounded shadow-xl text-slate-400 text-sm leading-relaxed mb-4">
+                        A full-stack web application to analyze WhatsApp chat exports. Implemented backend parsing and sentiment/toxicity scoring using async operations. Generated 0–100 community health scores based on sentiment, toxicity, and activity patterns.
+                    </div>
+                    <ul class="flex flex-wrap gap-3 font-mono text-xs text-slate-300 mb-6">
+                        <li>Next.js</li>
+                        <li>FastAPI</li>
+                        <li>PostgreSQL</li>
+                        <li>Clerk Auth</li>
+                        <li>NLP</li>
+                    </ul>
+                    <div class="flex gap-4 text-slate-300 text-xl">
+                        <a href="https://github.com/Shreyas-GN" target="_blank" class="hover:text-accent transition-colors"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="md:col-span-6 md:col-start-7 md:row-start-1 h-full min-h-[300px] bg-slate-800/50 rounded border border-slate-700 relative group overflow-hidden">
+                    <div class="absolute inset-0 bg-accent/20 mix-blend-multiply hover:bg-transparent transition-all duration-500"></div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="relative grid md:grid-cols-12 gap-4 items-center reveal">
+                <div class="md:col-span-7 md:col-start-6 md:row-start-1 z-10 md:text-right md:pl-6">
+                    <p class="font-mono text-accent text-sm mb-1">Static Analysis Platform</p>
+                    <h3 class="text-2xl font-bold text-slate-100 mb-4">Auto-Insights for Repositories</h3>
+                    <div class="bg-slate-850 p-6 rounded shadow-xl text-slate-400 text-sm leading-relaxed mb-4 md:text-right">
+                        Built a static-analysis tool that parses Git repositories using Python AST. Features a PostgreSQL-backed analysis pipeline with optimized queries, ACID-safe writes, and a FastAPI backend with caching and rate limiting.
+                    </div>
+                    <ul class="flex flex-wrap gap-3 font-mono text-xs text-slate-300 mb-6 md:justify-end">
+                        <li>FastAPI</li>
+                        <li>Python AST</li>
+                        <li>React</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                    <div class="flex gap-4 text-slate-300 text-xl md:justify-end">
+                        <a href="https://github.com/Shreyas-GN" target="_blank" class="hover:text-accent transition-colors"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                 <div class="md:col-span-6 md:col-start-1 md:row-start-1 h-full min-h-[300px] bg-slate-800/50 rounded border border-slate-700 relative group overflow-hidden">
+                    <div class="absolute inset-0 bg-accent/20 mix-blend-multiply hover:bg-transparent transition-all duration-500"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 max-w-4xl mx-auto px-6">
+        <h2 class="flex items-center text-2xl font-bold text-slate-100 mb-12 reveal">
+            <span class="text-accent font-mono mr-2">04.</span> Education & Achievements
+            <span class="ml-4 h-px bg-slate-700 flex-grow max-w-xs"></span>
+        </h2>
+        <div class="grid md:grid-cols-2 gap-12 reveal">
+            <!-- Education -->
+            <div>
+                <h3 class="text-xl font-bold text-slate-100 mb-6">Education</h3>
+                <div class="border-l-2 border-slate-700 pl-6 relative">
+                    <span class="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-accent"></span>
+                    <h4 class="text-lg font-bold text-slate-200">Bangalore Institute Of Technology</h4>
+                    <p class="text-sm font-mono text-accent mb-2">Masters in Computer Applications</p>
+                    <p class="text-sm text-slate-400 mb-4">Feb 2022 - Feb 2024 | CGPA: 8.0</p>
+                    <ul class="list-disc text-sm text-slate-400 pl-4 space-y-1">
+                        <li>Data Structures & Algorithms</li>
+                        <li>Distributed Systems</li>
+                        <li>Web Technologies</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Awards -->
+            <div>
+                <h3 class="text-xl font-bold text-slate-100 mb-6">Certifications & Awards</h3>
+                <div class="space-y-6">
+                    <div class="group">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="text-slate-200 font-medium group-hover:text-accent transition-colors">625th Rank in K-PGCET</h4>
+                            <span class="text-xs font-mono text-slate-500">2022</span>
+                        </div>
+                        <p class="text-sm text-slate-400">Awarded for academic excellence.</p>
+                    </div>
+                    <div class="group">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="text-slate-200 font-medium group-hover:text-accent transition-colors">Golden Badge (Python)</h4>
+                            <span class="text-xs font-mono text-slate-500">HackerRank</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Contact Section -->
+    <section id="contact" class="py-32 max-w-2xl mx-auto px-6 reveal">
+        <div class="text-center mb-10">
+            <p class="text-accent font-mono mb-4">05. What's Next?</p>
+            <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-6">Get In Touch</h2>
+            <p class="text-slate-400 text-lg">
+                I am currently looking for new opportunities as a Software Engineer. 
+                Fill out the form below and I'll get back to you!
+            </p>
+        </div>
+
+        <!-- Contact Form -->
+        <form action="mailto:shreyasgn@icloud.com" method="post" enctype="text/plain" class="bg-slate-850 p-8 rounded-lg shadow-2xl border border-white/5 space-y-6">
+            <div>
+                <label for="name" class="block text-sm font-mono text-accent mb-2">Your Name</label>
+                <input type="text" id="name" name="name" required
+                    class="w-full bg-slate-900 border border-slate-700 rounded px-4 py-3 text-slate-200 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder-slate-600">
+            </div>
+            
+            <div>
+                <label for="message" class="block text-sm font-mono text-accent mb-2">Message</label>
+                <textarea id="message" name="message" rows="5" required
+                    class="w-full bg-slate-900 border border-slate-700 rounded px-4 py-3 text-slate-200 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder-slate-600"></textarea>
+            </div>
+
+            <button type="submit" 
+                class="w-full group py-4 bg-transparent border border-accent text-accent rounded font-mono font-bold hover:bg-accent hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2">
+                Send Message
+                <i class="fa-regular fa-paper-plane group-hover:translate-x-1 transition-transform"></i>
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-slate-500 text-sm font-mono">
+        <div class="flex justify-center gap-6 mb-4 text-xl">
+            <a href="https://github.com/Shreyas-GN" class="hover:text-accent transition-colors"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:shreyasgn@icloud.com" class="hover:text-accent transition-colors"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p>Designed & Built by Shreyas GN</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 150;
+            revealElements.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+    </script>
 </body>
 </html>
